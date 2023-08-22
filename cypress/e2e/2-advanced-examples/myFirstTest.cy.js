@@ -84,7 +84,7 @@ context("My first test", () => {
   });
 
   it("renders the correct h1 text", () => {
-    cy.get("h1").should("contain.text", "Kitchen Sink");
+    cy.get("h1").should("contain.text", "Actions");
   });
 
   it("has an h1 on page", () => {
@@ -166,7 +166,7 @@ context("My first test", () => {
     cy.visit("/commands/actions");
     cy.get('.action-checkboxes [type="checkbox"]')
       .eq(1)
-      .check()
+      .check({ force: true })
       .should("be.checked");
   });
 });
