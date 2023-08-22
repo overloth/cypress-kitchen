@@ -1,9 +1,9 @@
 const navbarText = Cypress.env("navbarText");
 const token = "abcd12345";
 context("My first test", () => {
-  // beforeEach(() => {
-  //   cy.visit('/commands/actions')
-  // });
+  beforeEach(() => {
+    cy.visit("/commands/actions");
+  });
 
   it("triggers a popover on click", () => {
     cy.get(".action-btn").click();
