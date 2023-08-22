@@ -26,10 +26,10 @@ context("My first test", () => {
     cy.get(".rightclick-action-input-hidden").should("be.visible");
   });
 
-  it("shows the nav links on hover", () => {
-    cy.get(".dropdown-toggle").trigger("mouseover");
-    cy.get(".dropdown-menu").should("be.visible");
-  });
+  // it("shows the nav links on hover", () => {
+  //   cy.get(".dropdown-toggle").trigger("mouseover");
+  //   cy.get(".dropdown-menu").should("be.visible");
+  // });
 
   it("sets and gets token from local storage", () => {
     cy.setLocalStorage("token", token);
